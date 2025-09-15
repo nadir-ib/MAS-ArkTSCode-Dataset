@@ -1,0 +1,107 @@
+{
+  "dataset_info": {
+    "name": "MAS-ArkTSCode",
+    "version": "1.0",
+    "creation_date": "2025-09-15T10:33:01.181038",
+    "total_samples": 6034,
+    "compilation_success_rate": 88.6,
+    "high_quality_rate": 86.1,
+    "mean_quality_score": 7.86,
+    "std_quality_score": 0.95,
+    "language": "ArkTS",
+    "domain": "HarmonyOS Development"
+  },
+  "fields": {
+    "sample_id": {
+      "type": "integer",
+      "description": "Sequential sample identifier (1 to 6034)",
+      "range": [
+        1,
+        6034
+      ]
+    },
+    "prompt": {
+      "type": "string",
+      "description": "Original natural language prompt",
+      "example": "Create a simple ArkTS component with a button"
+    },
+    "enhanced_prompt": {
+      "type": "string",
+      "description": "Enhanced prompt (if enhancement was attempted)",
+      "example": "Create a simple ArkTS component with a button that handles click events"
+    },
+    "final_code": {
+      "type": "string",
+      "description": "Generated ArkTS code",
+      "max_length": 7317,
+      "min_length": 140,
+      "mean_length": 2060
+    },
+    "compilation_success": {
+      "type": "boolean",
+      "description": "Whether code compiles successfully (high-quality OR technical success)",
+      "true_count": 5347,
+      "false_count": 687
+    },
+    "high_quality_success": {
+      "type": "boolean",
+      "description": "High-quality success (compilation + score >= 7.0)",
+      "true_count": 5197
+    },
+    "technical_success": {
+      "type": "boolean",
+      "description": "Technical success (compiles but score < 7.0)",
+      "true_count": 150
+    },
+    "quality_score": {
+      "type": "float",
+      "description": "Overall quality score (1-10 scale)",
+      "range": [
+        1.0,
+        10.0
+      ],
+      "threshold_high_quality": 7.0,
+      "mean": 6.96,
+      "std": 2.65
+    },
+    "iteration_count": {
+      "type": "integer",
+      "description": "Number of iterations required",
+      "min": 1,
+      "max": 32,
+      "mean": 5.22
+    },
+    "enhancement_attempted": {
+      "type": "boolean",
+      "description": "Whether prompt enhancement was attempted",
+      "true_count": 1243
+    },
+    "code_length": {
+      "type": "integer",
+      "description": "Code length in characters",
+      "min": 140,
+      "max": 7317,
+      "mean": 2060
+    },
+    "line_count": {
+      "type": "integer",
+      "description": "Number of lines in code",
+      "mean": 81
+    },
+    "component_count": {
+      "type": "integer",
+      "description": "Number of @Component decorators",
+      "mean": 1.04
+    },
+    "state_count": {
+      "type": "integer",
+      "description": "Number of @State decorators",
+      "mean": 2.19
+    },
+    "import_count": {
+      "type": "integer",
+      "description": "Number of import statements",
+      "mean": 0.41
+    }
+  }
+}
