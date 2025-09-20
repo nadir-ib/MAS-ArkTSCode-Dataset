@@ -164,11 +164,7 @@ If you use this dataset in your research, please cite:
 
 This dataset is released under [LICENSE_TYPE] license. See LICENSE file for details.
 
-## Contact
 
-For questions or issues regarding this dataset, please contact:
-- Nadir İbrahimoğlu: nadiribrahimoglu@hotmail.com
-- Mustafa Umut Demirezen: umut@demirezen.tech
 
 ---
 
