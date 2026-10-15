@@ -84,6 +84,5 @@ access restrictions.
 
 ## Maintenance
 
-Maintained by the authors (contact in `README.md`). Errata and additions are recorded in
-`CHANGELOG.md`; the data file is versioned by its md5 in `checksums.md5`. Issues can be opened on the
-repository.
+Maintained by the authors (contact in `README.md`). Corrections and additions are announced in `README.md`;
+the data file is versioned by its md5 in `checksums.md5`. Issues can be opened on the repository.

@@ -22,7 +22,6 @@ MAS-ArkTSCode-Dataset/
 │   ├── verify_statistics.py         # recomputes every headline number from the CSV
 │   └── compute_coverage.py          # regenerates coverage/ from the CSV
 ├── checksums.md5                    # file integrity
-├── CHANGELOG.md
 ├── LICENSE                          # CC BY 4.0 (data and documentation)
 └── LICENSE-CODE                     # MIT (scripts)
 ```
@@ -174,4 +173,4 @@ remains available in the repository history.
 
 - Nadir İbrahimoğlu: nadiribrahimoglu@hotmail.com
 
-**Version** 1.1 (2026-10-15) · data unchanged since 1.0 (2025-09-15); see `CHANGELOG.md`.
+**Version** 1.1 (2026-10-15) · data file unchanged since 1.0 (2025-09-15); version 1.1 adds documentation, coverage tables and scripts.
