@@ -1,0 +1,10 @@
+handler,total_occurrences,samples_with_at_least_one,share_of_samples_pct,samples_with_at_least_one_compiled_only
+aboutToAppear,443,426,7.06,317
+aboutToDisappear,137,137,2.27,94
+onPageShow,25,22,0.36,13
+onPageHide,16,14,0.23,7
+onBackPress,1,1,0.02,1
+aboutToReuse,1,1,0.02,1
+onWillApplyTheme,1,1,0.02,1
+onDidBuild,0,0,0.0,0
+aboutToRecycle,0,0,0.0,0

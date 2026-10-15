@@ -1,0 +1,974 @@
+{
+  "source_csv": "mas_arkts_dataset.csv",
+  "records": 6034,
+  "compiled_records": 5347,
+  "consistency_checks": {
+    "rows": 6034,
+    "sample_id_is_1_to_n": true,
+    "compilation_success_equals_hq_or_technical": true,
+    "hq_implies_score_ge_7": true,
+    "technical_implies_score_lt_7": true,
+    "failed_samples_have_score_0": true,
+    "code_length_equals_len_final_code": true,
+    "line_count_equals_newline_count_plus_1": true,
+    "component_count_equals_regex_count": true,
+    "state_count_equals_regex_count": true,
+    "import_count_equals_regex_count": false,
+    "enhanced_prompt_present_count": 1043,
+    "enhancement_attempted_true_count": 1243,
+    "empty_final_code": 0
+  },
+  "deduplication": {
+    "method": "exact: SHA-256 of raw and of comment/whitespace-normalized final_code; near-duplicate: Jaccard similarity of 5-token shingle sets over normalized code, all pairs",
+    "near_duplicate_threshold": 0.8,
+    "records": 6034,
+    "distinct_prompts": 5974,
+    "exact_duplicate_prompts": 60,
+    "exact_duplicate_full_rows": 0,
+    "exact_duplicate_code_raw": 629,
+    "exact_duplicate_code_normalized": 684,
+    "near_duplicate_pairs_at_threshold": 35754,
+    "records_in_at_least_one_near_duplicate_pair": 1851,
+    "pair_count_by_jaccard_threshold": {
+      ">= 0.50": 109305,
+      ">= 0.60": 76065,
+      ">= 0.70": 50747,
+      ">= 0.80": 35754,
+      ">= 0.90": 23613,
+      ">= 0.95": 19432,
+      ">= 1.00": 15170
+    },
+    "note": "The 60 prompts that appear twice are identical in every field including final_code (see README); they are counted under exact_duplicate_prompts, and their code pairs appear in pair_count_by_jaccard_threshold at 1.0 only if their final_code is byte-identical."
+  },
+  "decorators_top": [
+    {
+      "decorator": "@Component",
+      "total_occurrences": 6265,
+      "samples_with_at_least_one": 6030,
+      "share_of_samples_pct": 99.93,
+      "samples_with_at_least_one_compiled_only": 5345
+    },
+    {
+      "decorator": "@Entry",
+      "total_occurrences": 6029,
+      "samples_with_at_least_one": 6029,
+      "share_of_samples_pct": 99.92,
+      "samples_with_at_least_one_compiled_only": 5347
+    },
+    {
+      "decorator": "@State",
+      "total_occurrences": 13195,
+      "samples_with_at_least_one": 5488,
+      "share_of_samples_pct": 90.95,
+      "samples_with_at_least_one_compiled_only": 4822
+    },
+    {
+      "decorator": "@Builder",
+      "total_occurrences": 3535,
+      "samples_with_at_least_one": 1215,
+      "share_of_samples_pct": 20.14,
+      "samples_with_at_least_one_compiled_only": 1134
+    },
+    {
+      "decorator": "@Prop",
+      "total_occurrences": 137,
+      "samples_with_at_least_one": 61,
+      "share_of_samples_pct": 1.01,
+      "samples_with_at_least_one_compiled_only": 56
+    },
+    {
+      "decorator": "@CustomDialog",
+      "total_occurrences": 40,
+      "samples_with_at_least_one": 40,
+      "share_of_samples_pct": 0.66,
+      "samples_with_at_least_one_compiled_only": 27
+    },
+    {
+      "decorator": "@StorageLink",
+      "total_occurrences": 40,
+      "samples_with_at_least_one": 21,
+      "share_of_samples_pct": 0.35,
+      "samples_with_at_least_one_compiled_only": 16
+    },
+    {
+      "decorator": "@Link",
+      "total_occurrences": 17,
+      "samples_with_at_least_one": 16,
+      "share_of_samples_pct": 0.27,
+      "samples_with_at_least_one_compiled_only": 14
+    },
+    {
+      "decorator": "@Consume",
+      "total_occurrences": 5,
+      "samples_with_at_least_one": 5,
+      "share_of_samples_pct": 0.08,
+      "samples_with_at_least_one_compiled_only": 3
+    },
+    {
+      "decorator": "@Styles",
+      "total_occurrences": 7,
+      "samples_with_at_least_one": 4,
+      "share_of_samples_pct": 0.07,
+      "samples_with_at_least_one_compiled_only": 3
+    }
+  ],
+  "lifecycle_handlers": [
+    {
+      "handler": "aboutToAppear",
+      "total_occurrences": 443,
+      "samples_with_at_least_one": 426,
+      "share_of_samples_pct": 7.06,
+      "samples_with_at_least_one_compiled_only": 317
+    },
+    {
+      "handler": "aboutToDisappear",
+      "total_occurrences": 137,
+      "samples_with_at_least_one": 137,
+      "share_of_samples_pct": 2.27,
+      "samples_with_at_least_one_compiled_only": 94
+    },
+    {
+      "handler": "onPageShow",
+      "total_occurrences": 25,
+      "samples_with_at_least_one": 22,
+      "share_of_samples_pct": 0.36,
+      "samples_with_at_least_one_compiled_only": 13
+    },
+    {
+      "handler": "onPageHide",
+      "total_occurrences": 16,
+      "samples_with_at_least_one": 14,
+      "share_of_samples_pct": 0.23,
+      "samples_with_at_least_one_compiled_only": 7
+    },
+    {
+      "handler": "onBackPress",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 1
+    },
+    {
+      "handler": "aboutToReuse",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 1
+    },
+    {
+      "handler": "onWillApplyTheme",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 1
+    },
+    {
+      "handler": "onDidBuild",
+      "total_occurrences": 0,
+      "samples_with_at_least_one": 0,
+      "share_of_samples_pct": 0.0,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "handler": "aboutToRecycle",
+      "total_occurrences": 0,
+      "samples_with_at_least_one": 0,
+      "share_of_samples_pct": 0.0,
+      "samples_with_at_least_one_compiled_only": 0
+    }
+  ],
+  "import_families": [
+    {
+      "family": "@ohos.arkui",
+      "total_occurrences": 1294,
+      "samples_with_at_least_one": 620,
+      "share_of_samples_pct": 10.28,
+      "samples_with_at_least_one_compiled_only": 2
+    },
+    {
+      "family": "@ohos.promptAction",
+      "total_occurrences": 387,
+      "samples_with_at_least_one": 386,
+      "share_of_samples_pct": 6.4,
+      "samples_with_at_least_one_compiled_only": 295
+    },
+    {
+      "family": "@ohos.router",
+      "total_occurrences": 180,
+      "samples_with_at_least_one": 180,
+      "share_of_samples_pct": 2.98,
+      "samples_with_at_least_one_compiled_only": 142
+    },
+    {
+      "family": "@kit",
+      "total_occurrences": 80,
+      "samples_with_at_least_one": 79,
+      "share_of_samples_pct": 1.31,
+      "samples_with_at_least_one_compiled_only": 79
+    },
+    {
+      "family": "@ohos.multimedia",
+      "total_occurrences": 59,
+      "samples_with_at_least_one": 53,
+      "share_of_samples_pct": 0.88,
+      "samples_with_at_least_one_compiled_only": 8
+    },
+    {
+      "family": "@ohos.app",
+      "total_occurrences": 55,
+      "samples_with_at_least_one": 43,
+      "share_of_samples_pct": 0.71,
+      "samples_with_at_least_one_compiled_only": 9
+    },
+    {
+      "family": "@ohos.base",
+      "total_occurrences": 32,
+      "samples_with_at_least_one": 32,
+      "share_of_samples_pct": 0.53,
+      "samples_with_at_least_one_compiled_only": 9
+    },
+    {
+      "family": "@ohos.mediaquery",
+      "total_occurrences": 31,
+      "samples_with_at_least_one": 31,
+      "share_of_samples_pct": 0.51,
+      "samples_with_at_least_one_compiled_only": 27
+    },
+    {
+      "family": "@ohos.web",
+      "total_occurrences": 33,
+      "samples_with_at_least_one": 30,
+      "share_of_samples_pct": 0.5,
+      "samples_with_at_least_one_compiled_only": 13
+    },
+    {
+      "family": "@ohos.data",
+      "total_occurrences": 25,
+      "samples_with_at_least_one": 24,
+      "share_of_samples_pct": 0.4,
+      "samples_with_at_least_one_compiled_only": 3
+    },
+    {
+      "family": "@ohos.abilityAccessCtrl",
+      "total_occurrences": 23,
+      "samples_with_at_least_one": 22,
+      "share_of_samples_pct": 0.36,
+      "samples_with_at_least_one_compiled_only": 2
+    },
+    {
+      "family": "@ohos.window",
+      "total_occurrences": 17,
+      "samples_with_at_least_one": 17,
+      "share_of_samples_pct": 0.28,
+      "samples_with_at_least_one_compiled_only": 6
+    },
+    {
+      "family": "@ohos.multimodalinput",
+      "total_occurrences": 20,
+      "samples_with_at_least_one": 17,
+      "share_of_samples_pct": 0.28,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.animator",
+      "total_occurrences": 14,
+      "samples_with_at_least_one": 14,
+      "share_of_samples_pct": 0.23,
+      "samples_with_at_least_one_compiled_only": 3
+    },
+    {
+      "family": "@ohos.net",
+      "total_occurrences": 12,
+      "samples_with_at_least_one": 12,
+      "share_of_samples_pct": 0.2,
+      "samples_with_at_least_one_compiled_only": 5
+    },
+    {
+      "family": "@ohos.file",
+      "total_occurrences": 15,
+      "samples_with_at_least_one": 12,
+      "share_of_samples_pct": 0.2,
+      "samples_with_at_least_one_compiled_only": 3
+    },
+    {
+      "family": "@ohos.sensor",
+      "total_occurrences": 12,
+      "samples_with_at_least_one": 12,
+      "share_of_samples_pct": 0.2,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "other",
+      "total_occurrences": 21,
+      "samples_with_at_least_one": 12,
+      "share_of_samples_pct": 0.2,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.multimodalInput",
+      "total_occurrences": 11,
+      "samples_with_at_least_one": 11,
+      "share_of_samples_pct": 0.18,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.prompt",
+      "total_occurrences": 10,
+      "samples_with_at_least_one": 10,
+      "share_of_samples_pct": 0.17,
+      "samples_with_at_least_one_compiled_only": 1
+    },
+    {
+      "family": "@ohos.resourceManager",
+      "total_occurrences": 9,
+      "samples_with_at_least_one": 9,
+      "share_of_samples_pct": 0.15,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.graphics",
+      "total_occurrences": 9,
+      "samples_with_at_least_one": 9,
+      "share_of_samples_pct": 0.15,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.animation",
+      "total_occurrences": 9,
+      "samples_with_at_least_one": 8,
+      "share_of_samples_pct": 0.13,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.curves",
+      "total_occurrences": 8,
+      "samples_with_at_least_one": 8,
+      "share_of_samples_pct": 0.13,
+      "samples_with_at_least_one_compiled_only": 2
+    },
+    {
+      "family": "@ohos.vibrator",
+      "total_occurrences": 7,
+      "samples_with_at_least_one": 7,
+      "share_of_samples_pct": 0.12,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.display",
+      "total_occurrences": 6,
+      "samples_with_at_least_one": 6,
+      "share_of_samples_pct": 0.1,
+      "samples_with_at_least_one_compiled_only": 3
+    },
+    {
+      "family": "@ohos.userIAM",
+      "total_occurrences": 6,
+      "samples_with_at_least_one": 6,
+      "share_of_samples_pct": 0.1,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.security",
+      "total_occurrences": 6,
+      "samples_with_at_least_one": 5,
+      "share_of_samples_pct": 0.08,
+      "samples_with_at_least_one_compiled_only": 1
+    },
+    {
+      "family": "@ohos.hilog",
+      "total_occurrences": 5,
+      "samples_with_at_least_one": 5,
+      "share_of_samples_pct": 0.08,
+      "samples_with_at_least_one_compiled_only": 2
+    },
+    {
+      "family": "@ohos.pullToRefresh",
+      "total_occurrences": 4,
+      "samples_with_at_least_one": 4,
+      "share_of_samples_pct": 0.07,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.util",
+      "total_occurrences": 4,
+      "samples_with_at_least_one": 4,
+      "share_of_samples_pct": 0.07,
+      "samples_with_at_least_one_compiled_only": 1
+    },
+    {
+      "family": "@ohos.picker",
+      "total_occurrences": 3,
+      "samples_with_at_least_one": 3,
+      "share_of_samples_pct": 0.05,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.geolocation",
+      "total_occurrences": 3,
+      "samples_with_at_least_one": 3,
+      "share_of_samples_pct": 0.05,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.charts",
+      "total_occurrences": 3,
+      "samples_with_at_least_one": 3,
+      "share_of_samples_pct": 0.05,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.ability",
+      "total_occurrences": 3,
+      "samples_with_at_least_one": 3,
+      "share_of_samples_pct": 0.05,
+      "samples_with_at_least_one_compiled_only": 1
+    },
+    {
+      "family": "@ohos.taskpool",
+      "total_occurrences": 3,
+      "samples_with_at_least_one": 3,
+      "share_of_samples_pct": 0.05,
+      "samples_with_at_least_one_compiled_only": 3
+    },
+    {
+      "family": "@ohos.sensors",
+      "total_occurrences": 2,
+      "samples_with_at_least_one": 2,
+      "share_of_samples_pct": 0.03,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.ui",
+      "total_occurrences": 3,
+      "samples_with_at_least_one": 2,
+      "share_of_samples_pct": 0.03,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.pullrefresh",
+      "total_occurrences": 2,
+      "samples_with_at_least_one": 2,
+      "share_of_samples_pct": 0.03,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.gesture",
+      "total_occurrences": 2,
+      "samples_with_at_least_one": 2,
+      "share_of_samples_pct": 0.03,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.deviceInfo",
+      "total_occurrences": 2,
+      "samples_with_at_least_one": 2,
+      "share_of_samples_pct": 0.03,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.accessibility",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.ark",
+      "total_occurrences": 2,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.events",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.distributedHardware",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.common",
+      "total_occurrences": 2,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.fileio",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 1
+    },
+    {
+      "family": "@ohos.notification",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.systemDateTime",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.select",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    },
+    {
+      "family": "@ohos.system",
+      "total_occurrences": 1,
+      "samples_with_at_least_one": 1,
+      "share_of_samples_pct": 0.02,
+      "samples_with_at_least_one_compiled_only": 0
+    }
+  ],
+  "arkui_components_top": [
+    {
+      "component": "Column",
+      "total_occurrences": 15109,
+      "samples_with_at_least_one": 5941,
+      "share_of_samples_pct": 98.46,
+      "samples_with_at_least_one_compiled_only": 5262
+    },
+    {
+      "component": "Text",
+      "total_occurrences": 19645,
+      "samples_with_at_least_one": 5397,
+      "share_of_samples_pct": 89.44,
+      "samples_with_at_least_one_compiled_only": 4761
+    },
+    {
+      "component": "Button",
+      "total_occurrences": 7159,
+      "samples_with_at_least_one": 3935,
+      "share_of_samples_pct": 65.21,
+      "samples_with_at_least_one_compiled_only": 3427
+    },
+    {
+      "component": "Image",
+      "total_occurrences": 6054,
+      "samples_with_at_least_one": 3145,
+      "share_of_samples_pct": 52.12,
+      "samples_with_at_least_one_compiled_only": 2891
+    },
+    {
+      "component": "ForEach",
+      "total_occurrences": 3380,
+      "samples_with_at_least_one": 2814,
+      "share_of_samples_pct": 46.64,
+      "samples_with_at_least_one_compiled_only": 2431
+    },
+    {
+      "component": "Row",
+      "total_occurrences": 3806,
+      "samples_with_at_least_one": 2615,
+      "share_of_samples_pct": 43.34,
+      "samples_with_at_least_one_compiled_only": 2187
+    },
+    {
+      "component": "ListItem",
+      "total_occurrences": 1602,
+      "samples_with_at_least_one": 1261,
+      "share_of_samples_pct": 20.9,
+      "samples_with_at_least_one_compiled_only": 1092
+    },
+    {
+      "component": "List",
+      "total_occurrences": 1563,
+      "samples_with_at_least_one": 1258,
+      "share_of_samples_pct": 20.85,
+      "samples_with_at_least_one_compiled_only": 1090
+    },
+    {
+      "component": "TextInput",
+      "total_occurrences": 2075,
+      "samples_with_at_least_one": 1189,
+      "share_of_samples_pct": 19.71,
+      "samples_with_at_least_one_compiled_only": 1050
+    },
+    {
+      "component": "Grid",
+      "total_occurrences": 749,
+      "samples_with_at_least_one": 746,
+      "share_of_samples_pct": 12.36,
+      "samples_with_at_least_one_compiled_only": 701
+    },
+    {
+      "component": "GridItem",
+      "total_occurrences": 787,
+      "samples_with_at_least_one": 745,
+      "share_of_samples_pct": 12.35,
+      "samples_with_at_least_one_compiled_only": 700
+    },
+    {
+      "component": "Stack",
+      "total_occurrences": 747,
+      "samples_with_at_least_one": 720,
+      "share_of_samples_pct": 11.93,
+      "samples_with_at_least_one_compiled_only": 630
+    },
+    {
+      "component": "Blank",
+      "total_occurrences": 310,
+      "samples_with_at_least_one": 287,
+      "share_of_samples_pct": 4.76,
+      "samples_with_at_least_one_compiled_only": 284
+    },
+    {
+      "component": "Scroll",
+      "total_occurrences": 266,
+      "samples_with_at_least_one": 250,
+      "share_of_samples_pct": 4.14,
+      "samples_with_at_least_one_compiled_only": 210
+    },
+    {
+      "component": "Flex",
+      "total_occurrences": 283,
+      "samples_with_at_least_one": 224,
+      "share_of_samples_pct": 3.71,
+      "samples_with_at_least_one_compiled_only": 197
+    }
+  ],
+  "control_flow_and_typing": [
+    {
+      "construct": "type_annotation",
+      "total_occurrences": 36137,
+      "samples_with_at_least_one": 5866,
+      "share_of_samples_pct": 97.22,
+      "samples_with_at_least_one_compiled_only": 5183
+    },
+    {
+      "construct": "arrow_function",
+      "total_occurrences": 21153,
+      "samples_with_at_least_one": 5746,
+      "share_of_samples_pct": 95.23,
+      "samples_with_at_least_one_compiled_only": 5062
+    },
+    {
+      "construct": "if_statement",
+      "total_occurrences": 8462,
+      "samples_with_at_least_one": 4035,
+      "share_of_samples_pct": 66.87,
+      "samples_with_at_least_one_compiled_only": 3524
+    },
+    {
+      "construct": "else_clause",
+      "total_occurrences": 3844,
+      "samples_with_at_least_one": 2477,
+      "share_of_samples_pct": 41.05,
+      "samples_with_at_least_one_compiled_only": 2235
+    },
+    {
+      "construct": "template_literal",
+      "total_occurrences": 3775,
+      "samples_with_at_least_one": 2229,
+      "share_of_samples_pct": 36.94,
+      "samples_with_at_least_one_compiled_only": 1916
+    },
+    {
+      "construct": "ternary_operator",
+      "total_occurrences": 3603,
+      "samples_with_at_least_one": 1648,
+      "share_of_samples_pct": 27.31,
+      "samples_with_at_least_one_compiled_only": 1377
+    },
+    {
+      "construct": "interface_declaration",
+      "total_occurrences": 1374,
+      "samples_with_at_least_one": 1224,
+      "share_of_samples_pct": 20.29,
+      "samples_with_at_least_one_compiled_only": 928
+    },
+    {
+      "construct": "generic_type_argument",
+      "total_occurrences": 1156,
+      "samples_with_at_least_one": 959,
+      "share_of_samples_pct": 15.89,
+      "samples_with_at_least_one_compiled_only": 854
+    },
+    {
+      "construct": "spread_operator",
+      "total_occurrences": 708,
+      "samples_with_at_least_one": 565,
+      "share_of_samples_pct": 9.36,
+      "samples_with_at_least_one_compiled_only": 454
+    },
+    {
+      "construct": "class_declaration",
+      "total_occurrences": 261,
+      "samples_with_at_least_one": 237,
+      "share_of_samples_pct": 3.93,
+      "samples_with_at_least_one_compiled_only": 214
+    },
+    {
+      "construct": "try_catch",
+      "total_occurrences": 181,
+      "samples_with_at_least_one": 130,
+      "share_of_samples_pct": 2.15,
+      "samples_with_at_least_one_compiled_only": 53
+    },
+    {
+      "construct": "null_safety_operator",
+      "total_occurrences": 184,
+      "samples_with_at_least_one": 110,
+      "share_of_samples_pct": 1.82,
+      "samples_with_at_least_one_compiled_only": 86
+    },
+    {
+      "construct": "async_function",
+      "total_occurrences": 170,
+      "samples_with_at_least_one": 85,
+      "share_of_samples_pct": 1.41,
+      "samples_with_at_least_one_compiled_only": 39
+    },
+    {
+      "construct": "await_expression",
+      "total_occurrences": 224,
+      "samples_with_at_least_one": 81,
+      "share_of_samples_pct": 1.34,
+      "samples_with_at_least_one_compiled_only": 36
+    },
+    {
+      "construct": "switch_statement",
+      "total_occurrences": 91,
+      "samples_with_at_least_one": 73,
+      "share_of_samples_pct": 1.21,
+      "samples_with_at_least_one_compiled_only": 55
+    },
+    {
+      "construct": "for_loop",
+      "total_occurrences": 66,
+      "samples_with_at_least_one": 50,
+      "share_of_samples_pct": 0.83,
+      "samples_with_at_least_one_compiled_only": 31
+    },
+    {
+      "construct": "promise_usage",
+      "total_occurrences": 94,
+      "samples_with_at_least_one": 45,
+      "share_of_samples_pct": 0.75,
+      "samples_with_at_least_one_compiled_only": 21
+    },
+    {
+      "construct": "enum_declaration",
+      "total_occurrences": 20,
+      "samples_with_at_least_one": 15,
+      "share_of_samples_pct": 0.25,
+      "samples_with_at_least_one_compiled_only": 8
+    },
+    {
+      "construct": "while_loop",
+      "total_occurrences": 3,
+      "samples_with_at_least_one": 3,
+      "share_of_samples_pct": 0.05,
+      "samples_with_at_least_one_compiled_only": 3
+    },
+    {
+      "construct": "type_alias",
+      "total_occurrences": 2,
+      "samples_with_at_least_one": 2,
+      "share_of_samples_pct": 0.03,
+      "samples_with_at_least_one_compiled_only": 0
+    }
+  ],
+  "ui_patterns": [
+    {
+      "pattern": "local_component_state",
+      "total_occurrences": 13195,
+      "samples_with_at_least_one": 5488,
+      "share_of_samples_pct": 90.95,
+      "samples_with_at_least_one_compiled_only": 4822
+    },
+    {
+      "pattern": "resource_reference",
+      "total_occurrences": 9237,
+      "samples_with_at_least_one": 2938,
+      "share_of_samples_pct": 48.69,
+      "samples_with_at_least_one_compiled_only": 2685
+    },
+    {
+      "pattern": "conditional_rendering",
+      "total_occurrences": 2702,
+      "samples_with_at_least_one": 2190,
+      "share_of_samples_pct": 36.29,
+      "samples_with_at_least_one_compiled_only": 1977
+    },
+    {
+      "pattern": "form_input",
+      "total_occurrences": 3147,
+      "samples_with_at_least_one": 1807,
+      "share_of_samples_pct": 29.95,
+      "samples_with_at_least_one_compiled_only": 1492
+    },
+    {
+      "pattern": "list_view",
+      "total_occurrences": 1568,
+      "samples_with_at_least_one": 1258,
+      "share_of_samples_pct": 20.85,
+      "samples_with_at_least_one_compiled_only": 1090
+    },
+    {
+      "pattern": "reusable_builder",
+      "total_occurrences": 3535,
+      "samples_with_at_least_one": 1215,
+      "share_of_samples_pct": 20.14,
+      "samples_with_at_least_one_compiled_only": 1134
+    },
+    {
+      "pattern": "grid_layout",
+      "total_occurrences": 749,
+      "samples_with_at_least_one": 746,
+      "share_of_samples_pct": 12.36,
+      "samples_with_at_least_one_compiled_only": 701
+    },
+    {
+      "pattern": "dialog_or_toast",
+      "total_occurrences": 1347,
+      "samples_with_at_least_one": 716,
+      "share_of_samples_pct": 11.87,
+      "samples_with_at_least_one_compiled_only": 600
+    },
+    {
+      "pattern": "list_detail_or_navigation",
+      "total_occurrences": 815,
+      "samples_with_at_least_one": 627,
+      "share_of_samples_pct": 10.39,
+      "samples_with_at_least_one_compiled_only": 595
+    },
+    {
+      "pattern": "gesture_handling",
+      "total_occurrences": 562,
+      "samples_with_at_least_one": 304,
+      "share_of_samples_pct": 5.04,
+      "samples_with_at_least_one_compiled_only": 194
+    },
+    {
+      "pattern": "scrollable_content",
+      "total_occurrences": 266,
+      "samples_with_at_least_one": 250,
+      "share_of_samples_pct": 4.14,
+      "samples_with_at_least_one_compiled_only": 210
+    },
+    {
+      "pattern": "swiper_carousel",
+      "total_occurrences": 192,
+      "samples_with_at_least_one": 192,
+      "share_of_samples_pct": 3.18,
+      "samples_with_at_least_one_compiled_only": 130
+    },
+    {
+      "pattern": "animation",
+      "total_occurrences": 270,
+      "samples_with_at_least_one": 143,
+      "share_of_samples_pct": 2.37,
+      "samples_with_at_least_one_compiled_only": 89
+    },
+    {
+      "pattern": "tabbed_interface",
+      "total_occurrences": 143,
+      "samples_with_at_least_one": 142,
+      "share_of_samples_pct": 2.35,
+      "samples_with_at_least_one_compiled_only": 63
+    },
+    {
+      "pattern": "parent_child_state_sharing",
+      "total_occurrences": 162,
+      "samples_with_at_least_one": 74,
+      "share_of_samples_pct": 1.23,
+      "samples_with_at_least_one_compiled_only": 67
+    },
+    {
+      "pattern": "app_or_persistent_storage",
+      "total_occurrences": 71,
+      "samples_with_at_least_one": 30,
+      "share_of_samples_pct": 0.5,
+      "samples_with_at_least_one_compiled_only": 19
+    }
+  ],
+  "size_complexity_summary": {
+    "chars": {
+      "mean": 2060.76,
+      "std": 934.63,
+      "min": 140.0,
+      "50%": 1923.0,
+      "max": 7317.0
+    },
+    "lines_total": {
+      "mean": 81.48,
+      "std": 36.09,
+      "min": 3.0,
+      "50%": 76.0,
+      "max": 257.0
+    },
+    "lines_nonblank": {
+      "mean": 74.77,
+      "std": 32.92,
+      "min": 3.0,
+      "50%": 69.0,
+      "max": 231.0
+    },
+    "comment_lines": {
+      "mean": 0.97,
+      "std": 1.86,
+      "min": 0.0,
+      "50%": 0.0,
+      "max": 11.0
+    },
+    "comment_ratio_pct": {
+      "mean": 1.16,
+      "std": 2.25,
+      "min": 0.0,
+      "50%": 0.0,
+      "max": 19.23
+    },
+    "methods": {
+      "mean": 5.99,
+      "std": 3.55,
+      "min": 0.0,
+      "50%": 5.0,
+      "max": 24.0
+    },
+    "arrow_functions": {
+      "mean": 3.51,
+      "std": 2.16,
+      "min": 0.0,
+      "50%": 3.0,
+      "max": 22.0
+    },
+    "structs": {
+      "mean": 1.05,
+      "std": 0.26,
+      "min": 0.0,
+      "50%": 1.0,
+      "max": 6.0
+    },
+    "custom_component_instantiations": {
+      "mean": 0.04,
+      "std": 0.27,
+      "min": 0.0,
+      "50%": 0.0,
+      "max": 5.0
+    },
+    "max_brace_nesting": {
+      "mean": 6.46,
+      "std": 1.8,
+      "min": 1.0,
+      "50%": 6.0,
+      "max": 15.0
+    }
+  }
+}

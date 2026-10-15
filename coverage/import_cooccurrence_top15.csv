@@ -1,0 +1,16 @@
+,@ohos.promptAction,@ohos.arkui.advanced,@ohos.arkui.component,@ohos.router,@kit.ArkUI,@ohos.arkui.common,@ohos.arkui,@ohos.arkui.gesture,@ohos.multimedia.media,@ohos.app.ability.common,@ohos.base,@ohos.mediaquery,@ohos.web.webview,@ohos.arkui.advancedUI,@ohos.arkui.UIContext
+@ohos.promptAction,386,28,27,37,3,7,7,1,9,5,8,9,6,4,5
+@ohos.arkui.advanced,28,249,22,11,0,19,3,15,12,11,12,1,8,0,2
+@ohos.arkui.component,27,22,212,9,0,34,0,24,10,9,6,2,5,6,5
+@ohos.router,37,11,9,179,1,3,4,2,2,1,5,0,2,1,1
+@kit.ArkUI,3,0,0,1,75,0,0,0,0,0,0,1,0,0,0
+@ohos.arkui.common,7,19,34,3,0,60,2,7,1,2,1,0,0,4,2
+@ohos.arkui,7,3,0,4,0,2,53,1,4,1,2,0,0,0,0
+@ohos.arkui.gesture,1,15,24,2,0,7,1,49,0,0,0,0,1,7,1
+@ohos.multimedia.media,9,12,10,2,0,1,4,0,38,3,5,1,0,1,1
+@ohos.app.ability.common,5,11,9,1,0,2,1,0,3,38,9,0,1,1,1
+@ohos.base,8,12,6,5,0,1,2,0,5,9,32,0,1,0,1
+@ohos.mediaquery,9,1,2,0,1,0,0,0,1,0,0,31,0,1,0
+@ohos.web.webview,6,8,5,2,0,0,0,1,0,1,1,0,30,0,0
+@ohos.arkui.advancedUI,4,0,6,1,0,4,0,7,1,1,0,1,0,29,1
+@ohos.arkui.UIContext,5,2,5,1,0,2,0,1,1,1,1,0,0,1,25

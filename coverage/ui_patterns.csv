@@ -1,0 +1,17 @@
+pattern,total_occurrences,samples_with_at_least_one,share_of_samples_pct,samples_with_at_least_one_compiled_only
+local_component_state,13195,5488,90.95,4822
+resource_reference,9237,2938,48.69,2685
+conditional_rendering,2702,2190,36.29,1977
+form_input,3147,1807,29.95,1492
+list_view,1568,1258,20.85,1090
+reusable_builder,3535,1215,20.14,1134
+grid_layout,749,746,12.36,701
+dialog_or_toast,1347,716,11.87,600
+list_detail_or_navigation,815,627,10.39,595
+gesture_handling,562,304,5.04,194
+scrollable_content,266,250,4.14,210
+swiper_carousel,192,192,3.18,130
+animation,270,143,2.37,89
+tabbed_interface,143,142,2.35,63
+parent_child_state_sharing,162,74,1.23,67
+app_or_persistent_storage,71,30,0.5,19

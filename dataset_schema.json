@@ -1,7 +1,7 @@
 {
   "dataset_info": {
     "name": "MAS-ArkTSCode",
-    "version": "1.0",
+    "version": "1.1",
     "creation_date": "2025-09-15T10:33:01.181038",
     "total_samples": 6034,
     "compilation_success_rate": 88.6,
@@ -9,7 +9,15 @@
     "mean_quality_score": 7.86,
     "std_quality_score": 0.95,
     "language": "ArkTS",
-    "domain": "HarmonyOS Development"
+    "domain": "HarmonyOS Development",
+    "schema_updated": "2026-10-15",
+    "data_file_md5": "8ac436943a8a357ef811275e96953aac",
+    "distinct_prompts": 5974,
+    "repeated_prompts": 60,
+    "distinct_final_code": 5405,
+    "records_with_repeated_code": 873,
+    "paper": "İbrahimoğlu & Demirezen, MAS-ArkTSCode, Automated Software Engineering (Springer), 2026",
+    "notes": "Data file unchanged since 1.0. mean_quality_score/std_quality_score (7.86/0.95) are over compiled records; quality_score.mean/std (6.96/2.65) are over all records with failures scored 0."
   },
   "fields": {
     "sample_id": {
@@ -28,14 +36,17 @@
     "enhanced_prompt": {
       "type": "string",
       "description": "Enhanced prompt (if enhancement was attempted)",
-      "example": "Create a simple ArkTS component with a button that handles click events"
+      "example": "Create a simple ArkTS component with a button that handles click events",
+      "present_count": 1043,
+      "note": "stored for 1043 records; enhancement_attempted is true for 1243"
     },
     "final_code": {
       "type": "string",
       "description": "Generated ArkTS code",
       "max_length": 7317,
       "min_length": 140,
-      "mean_length": 2060
+      "mean_length": 2060,
+      "note": "for the 687 non-compiling records this is the last attempt; 26 of them contain non-code model output"
     },
     "compilation_success": {
       "type": "boolean",
@@ -62,7 +73,8 @@
       ],
       "threshold_high_quality": 7.0,
       "mean": 6.96,
-      "std": 2.65
+      "std": 2.65,
+      "note": "mean/std here are over all 6034 records (failed records have score 0); over the 5347 compiled records the mean is 7.86 and the std 0.95"
     },
     "iteration_count": {
       "type": "integer",
@@ -101,7 +113,8 @@
     "import_count": {
       "type": "integer",
       "description": "Number of import statements",
-      "mean": 0.41
+      "mean": 0.41,
+      "note": "recorded by the workflow; differs from a line-anchored regex count of import statements in 6 records"
     }
   }
 }
