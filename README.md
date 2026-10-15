@@ -173,6 +173,5 @@ remains available in the repository history.
 ## Contact
 
 - Nadir İbrahimoğlu: nadiribrahimoglu@hotmail.com
-- Mustafa Umut Demirezen: umut@demirezen.tech
 
 **Version** 1.1 (2026-10-15) · data unchanged since 1.0 (2025-09-15); see `CHANGELOG.md`.
