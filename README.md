@@ -7,9 +7,7 @@ the compiler verdict, an automated quality score (1–10) and basic code metrics
 
 The dataset accompanies the paper
 
-> İbrahimoğlu, N., Demirezen, M.U.: *MAS-ArkTSCode: A Coordinated Multi-Agent Framework for
-> Compiler-Validated Code Generation — A Case Study on ArkTS for HarmonyOS*. Automated Software
-> Engineering (Springer), accepted 2026.
+> İbrahimoğlu, N., Demirezen, M.U.: *Compiler-Validated Code Generation for ArkTS on HarmonyOS: A Multi-Agent Framework and a Controlled Decomposition of Its Mechanisms*. Automated Software Engineering (Springer), accepted 2026.
 
 ## Contents
 
@@ -154,10 +152,10 @@ training or evaluation. See `DATASHEET.md` for the full discussion.
 ## Citation
 
 ```bibtex
-@article{ibrahimoglu2026masarktscode,
+@article{ibrahimoglu2026compilervalidated,
   author  = {İbrahimoğlu, Nadir and Demirezen, Mustafa Umut},
-  title   = {MAS-ArkTSCode: A Coordinated Multi-Agent Framework for Compiler-Validated Code Generation:
-             A Case Study on ArkTS for HarmonyOS},
+  title   = {Compiler-Validated Code Generation for {ArkTS} on {HarmonyOS}: A Multi-Agent Framework
+             and a Controlled Decomposition of Its Mechanisms},
   journal = {Automated Software Engineering},
   year    = {2026},
   note    = {Dataset: \url{https://github.com/nadir-ib/MAS-ArkTSCode-Dataset}}

@@ -4,8 +4,7 @@ documentation files) is licensed under the Creative Commons Attribution 4.0 Inte
 
 Copyright (c) 2025-2026 Nadir İbrahimoğlu and Mustafa Umut Demirezen
 
-Attribution: cite the paper "MAS-ArkTSCode: A Coordinated Multi-Agent Framework for Compiler-Validated
-Code Generation: A Case Study on ArkTS for HarmonyOS", Automated Software Engineering (Springer), 2026,
+Attribution: cite the paper "Compiler-Validated Code Generation for ArkTS on HarmonyOS: A Multi-Agent Framework and a Controlled Decomposition of Its Mechanisms", Automated Software Engineering (Springer), 2026,
 and link to https://github.com/nadir-ib/MAS-ArkTSCode-Dataset.
 
 =======================================================================
