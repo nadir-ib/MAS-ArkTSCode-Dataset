@@ -7,7 +7,7 @@ the compiler verdict, an automated quality score (1–10) and basic code metrics
 
 The dataset accompanies the paper
 
-> İbrahimoğlu, N., Demirezen, M.U.: *Compiler-Validated Code Generation for ArkTS on HarmonyOS: A Multi-Agent Framework and a Controlled Decomposition of Its Mechanisms*. Automated Software Engineering (Springer), 2026. https://doi.org/10.1007/s10515-026-00695-w
+> İbrahimoğlu, N., Demirezen, M.U.: *Compiler-Validated Code Generation for ArkTS on HarmonyOS: A Multi-Agent Framework and a Controlled Decomposition of Its Mechanisms*. Automated Software Engineering 33(4), 149 (2026). https://doi.org/10.1007/s10515-026-00695-w
 
 ## Contents
 
@@ -157,6 +157,9 @@ training or evaluation. See `DATASHEET.md` for the full discussion.
              and a Controlled Decomposition of Its Mechanisms},
   journal = {Automated Software Engineering},
   year    = {2026},
+  volume  = {33},
+  number  = {4},
+  pages   = {149},
   doi     = {10.1007/s10515-026-00695-w},
   url     = {https://doi.org/10.1007/s10515-026-00695-w},
   note    = {Dataset: \url{https://github.com/nadir-ib/MAS-ArkTSCode-Dataset}}
