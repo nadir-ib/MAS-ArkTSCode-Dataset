@@ -10,7 +10,7 @@ generation pipeline with a compiler in the loop can produce compiler-verified Ar
 release the resulting prompt–code pairs for research.
 
 **Who created it and who funded it?** Nadir İbrahimoğlu and Mustafa Umut Demirezen, in the course of the
-research reported in the accompanying paper (Automated Software Engineering, Springer, 2026). No external
+research reported in the accompanying paper (Automated Software Engineering, Springer, 2026, https://doi.org/10.1007/s10515-026-00695-w). No external
 funding is declared.
 
 ## Composition
