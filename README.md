@@ -150,6 +150,10 @@ training or evaluation. See `DATASHEET.md` for the full discussion.
 
 ## Citation
 
+İbrahimoğlu, N., Demirezen, M.U.: Compiler-validated code generation for ArkTS on HarmonyOS: a multi-agent framework and a controlled decomposition of its mechanisms. Automated Software Engineering 33(4), 149 (2026). https://doi.org/10.1007/s10515-026-00695-w
+
+A machine-readable version is in `CITATION.cff` (GitHub "Cite this repository").
+
 ```bibtex
 @article{ibrahimoglu2026compilervalidated,
   author  = {İbrahimoğlu, Nadir and Demirezen, Mustafa Umut},

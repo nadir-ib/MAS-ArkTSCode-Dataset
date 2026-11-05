@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite the article below (preferred-citation) and link to this repository."
+type: dataset
+title: "MAS-ArkTSCode Dataset: 6,034 compiler-verified ArkTS prompt-code pairs"
+version: "1.1"
+date-released: "2026-10-15"
+repository-code: "https://github.com/nadir-ib/MAS-ArkTSCode-Dataset"
+license: CC-BY-4.0
+authors:
+  - family-names: "İbrahimoğlu"
+    given-names: "Nadir"
+  - family-names: "Demirezen"
+    given-names: "Mustafa Umut"
+preferred-citation:
+  type: article
+  title: "Compiler-validated code generation for ArkTS on HarmonyOS: a multi-agent framework and a controlled decomposition of its mechanisms"
+  authors:
+    - family-names: "İbrahimoğlu"
+      given-names: "Nadir"
+    - family-names: "Demirezen"
+      given-names: "Mustafa Umut"
+  journal: "Automated Software Engineering"
+  volume: 33
+  issue: 4
+  start: 149
+  year: 2026
+  month: 10
+  doi: "10.1007/s10515-026-00695-w"
+  url: "https://doi.org/10.1007/s10515-026-00695-w"
+  issn: "1573-7535"
